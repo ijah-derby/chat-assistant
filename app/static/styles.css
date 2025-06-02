@@ -1,0 +1,153 @@
+/* Dark Mode Styling */
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #767779;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    /* Remove original background-color and transition if you want the image to dominate */
+    /* background-color: #2f4f7f; */
+    /* transition: background-color 0.3s ease; */
+
+    /* --- Full Page Background Image Styles --- */
+    background-image: url('me-dr.jpg'); /* Replace with your image URL/path */
+    background-size: cover; /* This makes the image cover the entire element */
+    background-position: center center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the image fixed when scrolling */
+    /* --- End Full Page Background Image Styles --- */
+}
+
+/* Chat Container */
+.chat-container {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 80%;
+    max-width: 90%;
+}
+
+#username{
+ font-size: 16px;
+}
+
+.chat-header {
+    display: flex;
+    align-items: center;
+    background-color: #1e1e1e;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 2px solid #0077cc;
+}
+
+
+/* Headings */
+h2 {
+    color: #878787;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Name Input Section */
+#name-input-container {
+    text-align: center;
+    background-color: #292929;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+input, textarea {
+    width: 90%;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 6px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #00d4ff;
+}
+
+/* Chat Box */
+#chat-box {
+    background: #252525;
+    padding: 15px;
+    height: 300px;
+    overflow-y: auto;
+    border-radius: 8px;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Message Styling */
+#chat-box p {
+    background: #3a3a3a;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 15px;
+    text-align: left;
+    max-width: 80%;
+    word-wrap: break-word;
+    color: white;
+}
+
+/* Admin Messages */
+#chat-box p.admin {
+    background: #0077cc;
+    color: white;
+    font-weight: bold;
+}
+
+/* Input Area */
+#chat-input-container {
+    display: none;
+    margin-top: 15px;
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+button {
+    background: #0077cc;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #005fa3;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .chat-container {
+        width: 95%;
+    }
+}
+

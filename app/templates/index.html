@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='me-dr.jpg') }}">
+     <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+    <img src="{{ url_for('static', filename='me-dr.jpg') }}" alt="Admin Profile" class="profile-img">
+    <h2>Don't Ramp</h2>
+</div>
+
+        <audio id="notificationSound" src="{{ url_for('static', filename='tone.mp3') }}"></audio>
+        <!-- Name Input Section -->
+        <div id="name-input-container">
+            <label for="username" class="name-label">Enter your name to start chat:</label>
+            <input type="text" id="username" placeholder="Your name">
+            <button onclick="setUsername()">Start Chat</button>
+        </div>
+
+        <!-- Chat Box (Hidden Initially) -->
+        <div id="chat-box" style="display: none;"></div>
+
+        <!-- Input Area (Hidden Initially) -->
+        <div id="chat-input-container" style="display: none;">
+            <input type="text" id="message" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='chat.js') }}"></script>
+</body>
+</html>
+
+
+
+
