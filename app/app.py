@@ -20,7 +20,7 @@ def handle_message(msg):
     sender_name = msg.split(":")[0].strip()
 
     # Send notification to ntfy
-    ntfy_url = "https://ntfy.pagez.co.uk/chat"
+    ntfy_url = "https://ntfy.example.com/your-topic"
     requests.post(ntfy_url, data=f"New chat message from {sender_name}: {msg}".encode('utf-8'))
 
     send(msg, broadcast=True)  # Broadcast message to all users
